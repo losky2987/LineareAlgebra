@@ -1,0 +1,99 @@
+% Datei: vorlesung.tex
+% LaTeX-Vorlage für Lineare Algebra (Deutsch, A4)
+\documentclass[a4paper,11pt,oneside]{scrartcl}
+
+% Sprache & Encoding
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Schrift & Mikrotypographie
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% Seitenränder
+\usepackage[
+    left=25mm,
+    right=25mm,
+    top=25mm,
+    bottom=25mm
+]{geometry}
+
+% Mathematik
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{bm}            % fette Mathe-Symbole
+\usepackage{physics}       % \norm, \abs, \eval, \ket, etc. (optional)
+\allowdisplaybreaks
+
+% Farben, Links
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+% Nützliche Operatoren und Kurzbefehle
+\newcommand{\trans}{^{\mathsf{T}}} % Transponieren
+\newcommand{\mat}[1]{\begin{pmatrix} #1 \end{pmatrix}}
+
+% Theorem-Umgebungen (Deutsch)
+\theoremstyle{plain}
+\newtheorem{satz}{Satz}[section]
+\newtheorem{lemma}[satz]{Lemma}
+\newtheorem{korollar}[satz]{Korollar}
+\newtheorem{proposition}[satz]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[satz]{Definition}
+\newtheorem{beispiel}[satz]{Beispiel}
+\newtheorem{bemerkung}[satz]{Bemerkung}
+\newtheorem{notation}[satz]{Notation}
+
+% Anpassen von Beweis-Umgebung (Beweis -> Beweis)
+\renewcommand{\proofname}{Beweis}
+
+% Kopf- und Fußzeilen (optional)
+\usepackage{scrlayer-scrpage}
+\clearpairofpagestyles
+\ihead{Lineare Algebra}
+\ohead{\pagemark}
+\cfoot{}
+
+% Dokumentinformationen
+\title{Lineare Algebra --- Vorlesungsnotizen}
+\date{WiSe 2025/2026}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\bigskip
+
+\section{Einführung}
+Kurz notieren: Ziel, Aufbau der Vorlesung, empfohlene Literatur.
+
+\section{Vektorräume und lineare Abbildungen}
+\begin{definition}
+Ein \emph{Vektorraum} über dem Körper \(K\) ist eine Menge \(V\) mit ...
+\end{definition}
+
+\begin{satz}[Basis und Dimension]
+Sei \(V\) ein endlichdimensionaler Vektorraum. Dann hat jede Basis dieselbe Anzahl an Elementen, die Dimension heißt \(\dim V\).
+\end{satz}
+
+\begin{proof}
+Skizze des Beweises...
+\end{proof}
+
+\begin{beispiel}
+Standardbasis des $\mathbb{R^n}$: $e_1,\dots,e_n$.
+\end{beispiel}
+
+\section{Matrizen und Determinanten}
+Definitionen, Rechenregeln, Zusammenhang zu linearen Abbildungen.
+
+\section{Eigenwerte und Eigenvektoren}
+Definition von Eigenwerten, Diagonalisierbarkeit, Jordan-Normalform (falls relevant).
+
+\section{Weitere Themen}
+Skalarprodukte, orthogonale Projektionen, Ränge, Singulärwertzerlegung, Anwendungen.
+
+% Ende des Dokuments
+\end{document}
